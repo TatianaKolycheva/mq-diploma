@@ -5,16 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 <link rel="stylesheet" href="CSS/Style.css">
+<link rel="stylesheet" href="CSS/Style.css" media="(min-width: 641px) and (max-width: 1199px)">
+<link rel="stylesheet" href="CSS/Style.css" media="(min-width: 360px) and (max-width: 640px)">
 </head>
 <body>
   
   <header class="header">
   <div class="navbar">
     <a href="/" class="logo">
-      <img src="SVG/noemi-logo.svg" class="svg" alt="Логотип" width=“180”>
-    </a>
+      <img src="SVG/noemi-logo.svg" class="svg" alt="Логотип"></a>
     <nav class="header-navigation">
-       <ul class="menu-list">
+      <ul class="menu-list">
         <li class="menu-list-item">
           <a href="0" class="menu-link">Главная</a>
         </li>
@@ -35,6 +36,11 @@
         </li>
       </ul>
     </nav>
+    <div class="menu-btn">
+     <span class="menu-btn-burger"></span>
+     <span class="menu-btn-burger"></span>
+     <span class="menu-btn-burger"></span>
+    </div>
   </div>
   <h1 class="title-one">Блог о творчестве, спорте, и образе жизни</h1>
 </header>
@@ -55,7 +61,7 @@
               <li class="tag"><a href="0" class="tag1">Interior</a>
               </li>
             </ul>
-            <h3 class="post__name">Сейчас в тренде: сад на подоконнике</h3>
+            <h3 class="post__name"><a href="0" class="post-name1">Сейчас в тренде: сад на подоконнике</a></h3>
           </div>
         </div>
       </article>
@@ -66,7 +72,7 @@
               <li class="tag"><a href="0" class="tag1">Food</a>
               </li>
             </ul>
-            <h3 class="post__name">Сыры на красивых картинках из интернета: какие они на вкус?</h3>
+            <h3 class="post__name"><a href="0" class="post-name1">Сыры на красивых картинках из интернета: какие они на вкус?</a></h3>
           </div>
         </div>
       </article>
@@ -79,7 +85,7 @@
               <li class="tag"><a href="0" class="tag1">Travel</a>
               </li>
             </ul>
-            <h3 class="post__name">Собираемся в первый поход в горы</h3>
+            <h3 class="post__name"><a href="0" class="post-name1">Собираемся в первый поход в горы</a></h3>
           </div>
         </div>
       </article>
@@ -93,7 +99,7 @@
               <li class="tag"><a href="0" class="tag1">Healh</a>
               </li>
             </ul>
-            <h3 class="post__name">Сейчас в тренде: сколько витамина с в лимонах?</h3>
+            <h3 class="post__name"><a href="0" class="post-name1">Сейчас в тренде: сколько витамина с в лимонах?</a></h3>
           </div>
         </div>
       </article>
@@ -304,9 +310,7 @@
             <span class="visually-hidden">Введите Ваш email</span>
             <input type="text" class="field" placeholder="Ваш email-адрес">
           </label>
-          <button type="submit" class="button-two">
-            <span class="visually-hidden">Кнопка подписки на рассылку</span>
-            Подписаться
+          <button type="submit" class="button-two">Подписаться
           </button>
         </form>
       </section>
@@ -351,22 +355,22 @@
 
         <ul class="theme">
           <li class="theme-item">
-            <a href="0" class="theme-link">Красота</a> <sup class="number">12</sup>
+            <a href="0" class="theme-link">Красота</a> <span class="number">12</span>
           </li>
           <li class="theme-item">
-            <a href="0" class="theme-link">Здоровье</a> <sup class="number">4</sup>
+            <a href="0" class="theme-link">Здоровье</a> <span class="number">4</span>
           </li>
           <li class="theme-item">
-            <a href="0" class="theme-link">Образ жизни</a> <sup class="number">145</sup>
+            <a href="0" class="theme-link">Образ жизни</a> <span class="number">145</span>
           </li>
           <li class="theme-item">
-            <a href="0" class="theme-link">Музыка</a> <sup class="number">28</sup>
+            <a href="0" class="theme-link">Музыка</a> <span class="number">28</span>
           </li>
           <li class="theme-item">
-            <a href="0" class="theme-link">Спорт</a> <sup class="number">62</sup>
+            <a href="0" class="theme-link">Спорт</a> <span class="number">62</span>
           </li>
           <li class="theme-item">
-            <a href="0" class="theme-link">Йога</a> <sup class="number">8</sup>
+            <a href="0" class="theme-link">Йога</a> <span class="number">8</span>
           </li>
         </ul>
       </section>
@@ -381,20 +385,29 @@
       <div class="handmaid-post">
         <article class="handmaid">
           <div class="product__imgbox">
-            <img class="product__img" src="Images/shop-item-desk1.jpg" alt="Превью товара">
+            <picture class="product__img">
+             <source
+              media="(min-width: 1200px)"            
+              srcset="Images/shop-item-desk1.jpg" alt="Превью товара">
+             <source
+              media="(min-width: 640px)"            
+              srcset="Images/shop-item-tablet1.jpg" alt="Превью товара">                                
+              <source
+               media="(min-width: 360px)"            
+               srcset="Images/shop-item-mobile1.jpg" alt="Превью товара" width="100%"> 
+              <img src="Images/shop-item-desk1.jpg" alt="Превью товара">         
+            </picture>
           </div>
           <div class="handmaid-info-post">
             <h3 class="title-handmaid__name">Подушки на диван</h3>
-            <span class="post-content">Набор из двух подушек с модными принтами. Видео о создании <a href="#" class="link">здесь</a></span>
+            <span class="handmaid-post-content">Набор из двух подушек с модными принтами. Видео о создании <a href="#" class="link">здесь</a></span>
             <div class="product__footer">
               <div class="product__prices">
                 <span class="product__price product__price_old">
-                  <span class="product__price-value">1000</span>
-                  <span class="product__rub">₽</span>
+                  <span class="product__price-value">1000 ₽</span>
                 </span>
                 <span class="product__price">
-                  <span class="product__price-value">800</span>
-                  <span class="product__rub">₽</span>
+                  <span class="product__price-value">800 ₽</span>
                 </span>
               </div>
               <button type="submit" class="button-three">
@@ -406,41 +419,58 @@
 
         <article class="handmaid">
           <div class="product__imgbox">
-            <img class="product__img" src="Images/shop-item-desk2.jpg" alt="Превью товара">
+            <picture class="product__img">
+             <source
+               media="(min-width: 1200px)"            
+               srcset="Images/shop-item-desk2.jpg" alt="Превью товара">
+             <source
+               media="(min-width: 640px)"            
+               srcset="Images/shop-item-tablet2.jpg" alt="Превью товара">                                
+             <source
+               media="(min-width: 360px)"            
+               srcset="Images/shop-item-mobile2.jpg" alt="Превью товара" width="100%"> 
+             <img src="Images/shop-item-desk2.jpg" alt="Превью товара">         
+            </picture>
           </div>
           <div class="handmaid-info-post">
             <h3 class="title-handmaid__name">Кукла "Зайчик"</h3>
-            <span class="post-content">Интерьерная рукодельная кукла "Зайчик", созданию которой посвящена <a href="#" class="link"> весенняя серия постов </a>в блоге и несколько подкастов.</span>
+            <span class="handmaid-post-content">Интерьерная рукодельная кукла "Зайчик", созданию которой посвящена <a href="#" class="link"> весенняя серия постов </a>в блоге и несколько подкастов.</span>
             <div class="product__footer">
               <div class="product__prices">
                 <span class="product__price">
-                  <span class="product__price-value">3500</span>
-                  <span class="product__rub">₽</span>
+                  <span class="product__price-value">3500 ₽</span>
                 </span>
               </div>
-              <button type="submit" class="button-three">
-                <span class="visually-hidden">Кнопка перехода к покупке товара</span>
-                Купить
+              <button type="submit" class="button-three">Купить
               </button>
             </div>
 
         </article>
         <article class="handmaid">
           <div class="product__imgbox">
-            <img class="product__img" src="Images/shop-item-desk3.jpg" alt="Превью товара">
+           <picture class="product__img">
+             <source
+              media="(min-width: 1200px)"            
+              srcset="Images/shop-item-desk3.jpg" alt="Превью товара">
+             <source
+              media="(min-width: 640px)"            
+              srcset="Images/shop-item-tablet3.jpg" alt="Превью товара">                             
+            <source
+              media="(min-width: 360px)"            
+              srcset="Images/shop-item-mobile3.jpg" alt="Превью товара" width="100%"> 
+            <img src="Images/shop-item-desk3.jpg" alt="Превью товара">         
+           </picture>
           </div>
           <div class="handmaid-info-post">
             <h3 class="title-handmaid__name">Шестиугольная рамка</h3>
-            <span class="post-content">Необычная рамка для украшения дома из видео <a href="#" class="link">"Как сделать рамку из подручных средств за 30 минут"</a></span>
+            <span class="handmaid-post-content">Необычная рамка для украшения дома из видео <a href="#" class="link">"Как сделать рамку из подручных средств за 30 минут"</a></span>
             <div class="product__footer">
               <div class="product__prices">
                 <span class="product__price product__price_old">
-                  <span class="product__price-value">500</span>
-                  <span class="product__rub">₽</span>
+                  <span class="product__price-value">500 ₽</span>
                 </span>
                 <span class="product__price">
-                  <span class="product__price-value">400</span>
-                  <span class="product__rub">₽</span>
+                  <span class="product__price-value">400 ₽</span>
                 </span>
               </div>
               <button type="submit" class="button-three">
@@ -458,14 +488,13 @@
   <address class="social-items">
     <ul class="social">
       <li class="social-item">
-        <a href="#0" class="social-link social-link--dribbble"></a>
-        <span class="visually-hidden">Ссылка на соцсеть "Dribbble"</span>
+        <a href="#0" class="social-link social-link--dribbble"><span class="visually-hidden">Ссылка на соцсеть "Dribbble"</span></a>
       </li>
       <li class="social-item">
-        <a href="#0" class="social-link social-link--pin"></a></a> <span class="visually-hidden">Ссылка на соцсеть "Pinterest"</span>
+        <a href="#0" class="social-link social-link--pin"><span class="visually-hidden">Ссылка на соцсеть "Pinterest"</span></a> 
       </li>
       <li class="social-item">
-        <a href="#0" class="social-link social-link--twich"></a></a> <span class="visually-hidden">Ссылка на соцсеть "Twich"</span>
+        <a href="#0" class="social-link social-link--twich"><span class="visually-hidden">Ссылка на соцсеть "Twich"</span></a>
       </li>
     </ul>
   </address>
@@ -478,7 +507,7 @@
   <div class="popup">
     <div class="popup__close_group">
       <button class="popup__close" type="button">
-        <span class="visually-hidden">Закрыть окно</span>
+      <span class="visually-hidden">Закрыть окно</span>
       </button>
     </div>
     <div class="feedback">
@@ -514,15 +543,13 @@
           </label>
         </label>
       </div>
-      <form class="form-row">
-        <span class="form-hint">Расскажите, какой контент вы хотели бы видеть на нашем сайте?</span>
-        <textarea class="field_text" placeholder="Может, больше рецептов?"></textarea>
-      </form>
-      <button type="submit" class="button-two">
-        <span class="visually-hidden">Кнопка отправить</span>
-        Отправить
+      <span class="form-hint">Расскажите, какой контент вы хотели бы видеть на нашем сайте?</span>
+      <textarea class="field_text" placeholder="Может, больше рецептов?"></textarea>
+        
+      <button type="submit" class="button-two">Отправить
       </button>
-    </div>
+    </div> 
   </div>
+</div> 
 </body>
 </html>
