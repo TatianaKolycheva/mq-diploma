@@ -11,31 +11,34 @@
 <body>
   
   <header class="header">
-  <div class="navbar">
-    <a href="/" class="logo">
+  
+  <div class="navbar-menu">
+    <div class="navbar">
+      <a href="/" class="logo">
       <img src="SVG/noemi-logo.svg" class="svg" alt="Логотип"></a>
-    <nav class="header-navigation">
-      <ul class="menu-list">
-        <li class="menu-list-item">
+      <nav class="header-navigation">
+        <ul class="menu-list">
+         <li class="menu-list-item">
           <a href="0" class="menu-link">Главная</a>
-        </li>
-        <li class="menu-list-item">
+         </li>
+         <li class="menu-list-item">
           <a href="0" class="menu-link">Посты</a>
-        </li>
-        <li class="menu-list-item">
+         </li>
+         <li class="menu-list-item">
           <a href="0" class="menu-link">Статьи</a>
-        </li>
-        <li class="menu-list-item">
+         </li>
+         <li class="menu-list-item">
           <a href="0" class="menu-link">Теги</a>
-        </li>
-        <li class="menu-list-item">
+         </li>
+         <li class="menu-list-item">
           <a href="0" class="menu-link">Темы</a>
-        </li>
-        <li class="menu-list-item">
+         </li>
+         <li class="menu-list-item">
           <a href="0" class="menu-link">Контакты</a>
         </li>
-      </ul>
-    </nav>
+       </ul>
+      </nav>
+    </div>
     <div class="menu-btn">
      <span class="menu-btn-burger"></span>
      <span class="menu-btn-burger"></span>
@@ -390,7 +393,7 @@
               media="(min-width: 1200px)"            
               srcset="Images/shop-item-desk1.jpg" alt="Превью товара">
              <source
-              media="(min-width: 640px)"            
+              media="(min-width: 768px)"            
               srcset="Images/shop-item-tablet1.jpg" alt="Превью товара">                                
               <source
                media="(min-width: 360px)"            
@@ -411,7 +414,6 @@
                 </span>
               </div>
               <button type="submit" class="button-three">
-                <span class="visually-hidden">Кнопка перехода к покупке товара</span>
                 Купить
               </button>
             </div>
@@ -424,8 +426,8 @@
                media="(min-width: 1200px)"            
                srcset="Images/shop-item-desk2.jpg" alt="Превью товара">
              <source
-               media="(min-width: 640px)"            
-               srcset="Images/shop-item-tablet2.jpg" alt="Превью товара">                                
+               media="(min-width: 768px)"            
+               srcset="Images/shop-item-tablet2.jpg" alt="Превью товара" min-width="50%">                                
              <source
                media="(min-width: 360px)"            
                srcset="Images/shop-item-mobile2.jpg" alt="Превью товара" width="100%"> 
@@ -434,7 +436,7 @@
           </div>
           <div class="handmaid-info-post">
             <h3 class="title-handmaid__name">Кукла "Зайчик"</h3>
-            <span class="handmaid-post-content">Интерьерная рукодельная кукла "Зайчик", созданию которой посвящена <a href="#" class="link"> весенняя серия постов </a>в блоге и несколько подкастов.</span>
+            <span class="handmaid-post-content">Интерьерная рукодельная кукла "Зайчик", созданию которой посвящена<a href="#" class="link"> весенняя серия постов</a> в блоге и несколько подкастов.</span>
             <div class="product__footer">
               <div class="product__prices">
                 <span class="product__price">
@@ -453,7 +455,7 @@
               media="(min-width: 1200px)"            
               srcset="Images/shop-item-desk3.jpg" alt="Превью товара">
              <source
-              media="(min-width: 640px)"            
+              media="(min-width: 768px)"            
               srcset="Images/shop-item-tablet3.jpg" alt="Превью товара">                             
             <source
               media="(min-width: 360px)"            
@@ -505,12 +507,10 @@
 
 <div class="popup-fade">
   <div class="popup">
-    <div class="popup__close_group">
-      <button class="popup__close" type="button">
+    <button class="popup__close" type="button">
       <span class="visually-hidden">Закрыть окно</span>
       </button>
-    </div>
-    <div class="feedback">
+      <div class="feedback">
       <header class="feedback__header">
         <h2 class="trends-title"><a href="0" class="title-two">Ваш фидбэк</a></h2>
       </header>
